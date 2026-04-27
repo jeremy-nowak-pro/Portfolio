@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 9 9 14;
+    --foreground: 240 240 245;
+    --muted: 150 150 165;
+    --accent: 139 92 246;
+    --border: 255 255 255;
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.18), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 100%, rgba(56, 189, 248, 0.10), transparent);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-foreground;
+  }
+}
+
+@layer components {
+  /* Glassmorphism — la base réutilisée par GlassCard */
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08]
+           shadow-glass;
+  }
+
+  .glass-hover {
+    @apply hover:bg-white/[0.05] hover:border-white/[0.12]
+           hover:shadow-glass-hover transition-all duration-300;
+  }
+
+  /* Conteneur principal d'une page : padding vertical cohérent */
+  .page-section {
+    @apply py-16 sm:py-24 lg:py-32;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br
+           from-foreground via-foreground to-foreground/60;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+/* Respecte les préférences utilisateur */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
