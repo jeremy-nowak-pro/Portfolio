@@ -19,7 +19,7 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "4+", label: "Années" },
-  { value: "2", label: "Diplômes" },
+  { value: "Bac +4", label: "Niveau" },
   { value: "Backend", label: "Focus" },
 ];
 
