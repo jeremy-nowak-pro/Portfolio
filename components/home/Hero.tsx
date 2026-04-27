@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { HeroVisual } from "@/components/home/HeroVisual";
 
 const containerVariants = {
   hidden: {},
@@ -21,6 +22,14 @@ const itemVariants = {
 export function Hero() {
   return (
     <section className="relative pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-24">
+      {/*
+        Layout responsive :
+        - Mobile / tablette : une seule colonne, le visuel est masqué.
+        - lg+ : deux colonnes — texte à gauche (souple), visuel à droite (max 420px).
+        Le visuel a sa propre animation d'entrée (cf. HeroVisual), donc on n'inclut
+        pas dans le motion stagger pour garder un rythme indépendant.
+      */}
+      <div className="grid lg:grid-cols-[1fr_minmax(0,420px)] gap-10 lg:gap-16 items-center">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -99,6 +108,12 @@ export function Hero() {
           </Button>
         </motion.div>
       </motion.div>
+
+        {/* Visuel — masqué sur mobile/tablette pour ne pas alourdir la page */}
+        <div className="hidden lg:block">
+          <HeroVisual />
+        </div>
+      </div>
     </section>
   );
 }
