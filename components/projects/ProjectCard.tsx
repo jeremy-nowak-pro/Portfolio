@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
-import type { Project } from "@/types";
+import type { Project, ProjectStatus } from "@/types";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +11,19 @@ interface ProjectCardProps {
   variant?: "default" | "compact";
   priority?: boolean;
 }
+
+// Mapping centralisé statut → badge — facile à ajuster ou traduire.
+const STATUS_LABELS: Record<ProjectStatus, string> = {
+  live: "Achevé",
+  "in-progress": "En cours",
+  archived: "Archivé",
+};
+
+const STATUS_COLORS: Record<ProjectStatus, string> = {
+  live: "text-emerald-300",
+  "in-progress": "text-amber-300",
+  archived: "text-muted",
+};
 
 export function ProjectCard({
   project,
@@ -34,19 +47,15 @@ export function ProjectCard({
             priority={priority}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
-          {project.status !== "live" && (
-            <span
-              className={cn(
-                "absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-mono",
-                "bg-background/70 backdrop-blur-sm border border-white/10",
-                project.status === "in-progress"
-                  ? "text-amber-300"
-                  : "text-muted",
-              )}
-            >
-              {project.status === "in-progress" ? "En cours" : "Archivé"}
-            </span>
-          )}
+          <span
+            className={cn(
+              "absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-mono",
+              "bg-background/70 backdrop-blur-sm border border-white/10",
+              STATUS_COLORS[project.status],
+            )}
+          >
+            {STATUS_LABELS[project.status]}
+          </span>
         </div>
 
         <div className={cn("flex-1 flex flex-col", variant === "compact" ? "p-5" : "p-6")}>

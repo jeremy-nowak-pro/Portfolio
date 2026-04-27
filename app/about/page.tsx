@@ -121,7 +121,7 @@ export default function AboutPage() {
           <GlassCard padding="none" className="overflow-hidden lg:sticky lg:top-24">
             <div className="relative aspect-square">
               <Image
-                src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=800&q=80"
+                src="/images/profile.jpeg"
                 alt={`Photo de ${siteConfig.name}`}
                 fill
                 sizes="(max-width: 1024px) 100vw, 33vw"

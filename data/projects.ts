@@ -7,14 +7,14 @@ import type { Project } from "@/types";
  */
 export const projects: Project[] = [
   {
-    slug: "recipe-swipe",
-    title: "Recipe Swipe",
+    slug: "fooder",
+    title: "Fooder",
     tagline:
-      "Application mobile de découverte de recettes avec un système de swipe et une logique métier côté backend.",
+      "Projet de fin d'études — application mobile de découverte de recettes par swipe, avec logique métier côté backend.",
     description:
-      "App mobile React Native + backend Node/TypeScript. Découverte de recettes par swipe, gestion utilisateurs, stockage et filtrage.",
+      "Projet fil rouge du titre CDA. App mobile React Native + backend Node/TypeScript : découverte de recettes par swipe, gestion utilisateurs, filtrage.",
     longDescription:
-      "Recipe Swipe est mon projet phare actuel. L'idée : transformer la découverte de recettes en une expérience type Tinder, où l'utilisateur swipe pour valider ses préférences et recevoir des suggestions personnalisées.\n\nCôté mobile, j'ai construit l'app avec React Native (Expo), avec une attention particulière à la structuration des composants et à la gestion d'état. Côté backend, l'architecture est en TypeScript / Node.js (Express), avec une séparation claire entre services, middlewares et contrôleurs. L'authentification s'appuie sur Supabase (JWT, gestion de tokens), et les données sont stockées dans PostgreSQL via Supabase.\n\nL'objectif technique du projet est autant la fonctionnalité que la rigueur de l'architecture : monorepo TypeScript, principes SOLID, environnements staging / production séparés.",
+      "Fooder est mon projet de fin d'études, réalisé dans le cadre du titre Concepteur Développeur d'Applications. Mené en autonomie sur la dernière année de formation, c'est le projet sur lequel j'ai pu pousser le plus loin la réflexion architecture, de la conception au déploiement.\n\nL'idée : transformer la découverte de recettes en une expérience type Tinder, où l'utilisateur swipe pour valider ses préférences et recevoir des suggestions personnalisées.\n\nCôté mobile, j'ai construit l'app avec React Native (Expo), avec une attention particulière à la structuration des composants et à la gestion d'état. Côté backend, l'architecture est en TypeScript / Node.js (Express), avec une séparation claire entre services, middlewares et contrôleurs. L'authentification s'appuie sur Supabase (JWT, gestion de tokens), et les données sont stockées dans PostgreSQL via Supabase.\n\nL'objectif technique du projet est autant la fonctionnalité que la rigueur de l'architecture : monorepo TypeScript, principes SOLID, environnements staging / production séparés.",
     cover:
       "https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1600&q=80",
     stack: [
@@ -28,10 +28,10 @@ export const projects: Project[] = [
     ],
     role: "Conception & développement full-stack",
     year: 2025,
-    status: "in-progress",
+    status: "live",
     featured: true,
     links: {
-      github: "https://github.com/jeremy-nowak-pro",
+      github: "https://github.com/jeremy-nowak/fil-rouge-fooder",
     },
     highlights: [
       "Architecture monorepo TypeScript (mobile + backend) avec responsabilités clairement séparées",
@@ -41,38 +41,31 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "modular-backend",
-    title: "Backend modulaire",
+    slug: "lhvaudier",
+    title: "lhvaudier.fr",
     tagline:
-      "Backend Node.js / TypeScript structuré, pensé pour la maintenabilité et la scalabilité.",
+      "Site vitrine pour une illustratrice et peintre française, architecturé pour évoluer vers une boutique en ligne d'œuvres.",
     description:
-      "Architecture backend Express avec authentification, gestion d'environnements et conteneurisation Docker.",
+      "Mission freelance — site personnel d'une artiste illustratrice, en Next.js et backend Go, pensé dès le départ pour supporter une future boutique d'œuvres.",
     longDescription:
-      "Projet d'exploration architecturale autour d'un backend Node.js / Express en TypeScript, avec une approche orientée microservices / SOA. Mise en place de l'authentification (JWT, intégration Auth0 et Supabase selon les contextes), d'un ORM (TypeORM) avec PostgreSQL, et conteneurisation complète via Docker / Docker Compose.\n\nLa séparation des responsabilités est centrale : couche services pour la logique métier, middlewares pour les concerns transverses (auth, logging, validation), contrôleurs comme points d'entrée fins. L'ensemble est déployable en staging et production via des pipelines CI/CD Bitbucket.",
+      "Mission en freelance pour la conception et le développement du site personnel d'une illustratrice et peintre française. Le site présente son univers, son parcours et une sélection de ses travaux — graphisme textile, illustration, peinture — dans une mise en page volontairement sobre, pensée pour laisser respirer les œuvres et mettre le visuel au premier plan.\n\nLe projet a été conçu dès le départ avec une vision évolutive : ne pas rester un simple site vitrine, mais constituer la base technique d'une future boutique en ligne — vente d'originaux, de tirages ou d'éditions limitées. L'architecture sépare clairement frontend, backend et couche de données, et le modèle relationnel a été construit pour supporter les entités d'un e-commerce (produits, utilisateurs, commandes, catégories), permettant une transition progressive sans refonte majeure.\n\nCôté technique, le frontend est en Next.js / TailwindCSS pour bénéficier du rendu SSR/SSG et des performances SEO — un point critique pour la visibilité d'une artiste indépendante. Le backend est en Go (Golang), choisi pour sa performance et sa scalabilité, exposant une API REST. Les interactions dynamiques (formulaire de contact, automatisations) passent par des webhooks.",
     cover:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80",
-    stack: [
-      "Node.js",
-      "TypeScript",
-      "Express",
-      "TypeORM",
-      "PostgreSQL",
-      "Docker",
-      "Auth0",
-      "Supabase",
-    ],
-    role: "Conception backend & DevOps",
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=1600&q=80",
+    stack: ["Next.js", "React", "TailwindCSS", "Go", "REST API", "Vercel"],
+    role: "Conception, développement & déploiement",
     year: 2025,
     status: "live",
     featured: true,
     links: {
-      github: "https://github.com/jeremy-nowak-pro",
+      live: "https://lhvaudier.fr",
     },
     highlights: [
-      "Architecture en couches (services, middlewares, contrôleurs) inspirée de SOLID",
-      "Authentification sécurisée multi-provider (JWT, Auth0, Supabase)",
-      "Conteneurisation Docker / Docker Compose avec environnements staging et production",
-      "Pipelines CI/CD Bitbucket pour le déploiement automatisé",
+      "Architecture e-commerce ready : entités produits, utilisateurs, commandes et catégories modélisées dès la phase initiale",
+      "Backend Go pour la performance et la capacité de montée en charge",
+      "Frontend Next.js avec rendu SSR/SSG pour un SEO et des Core Web Vitals optimisés — un atout pour la visibilité d'une artiste indépendante",
+      "Pipeline d'optimisation des images (formats modernes, lazy loading) pour valoriser les œuvres sans dégrader les performances",
+      "Séparation claire des responsabilités : frontend, backend, couche de données",
+      "Interactions dynamiques (contact, notifications) via un système de webhooks",
     ],
   },
 ];

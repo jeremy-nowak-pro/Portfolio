@@ -49,10 +49,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: ["/og-image.png"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  // Pas besoin de config "icons:" — Next.js App Router détecte automatiquement
+  // les fichiers app/icon.png et app/apple-icon.png et génère les balises <link>.
   robots: {
     index: true,
     follow: true,
