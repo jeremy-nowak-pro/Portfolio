@@ -77,7 +77,7 @@ export function Hero() {
             <span className="text-foreground">
               après deux années d'alternance au siège d'une banque
             </span>{" "}
-            — une expérience qui m'a permis d'évoluer dans un environnement
+            une expérience qui m'a permis d'évoluer dans un environnement
             structuré et exigeant.
           </p>
 
@@ -86,7 +86,7 @@ export function Hero() {
             orientées backend, avec une attention particulière à la fiabilité,
             à la performance et à la maintenabilité du code. J'ai l'habitude
             de travailler sur des architectures modernes, de développer et
-            maintenir des API, et d'intervenir sur l'ensemble du cycle —
+            maintenir des API, et d'intervenir sur l'ensemble du cycle, 
             du modèle de données jusqu'au déploiement.
           </p>
 

@@ -155,29 +155,32 @@ export default function AboutPage() {
             />
             <div className="mt-8 space-y-5 text-base sm:text-lg text-muted leading-relaxed">
               <p>
-                Développeur backend, je conçois des applications et des API
-                robustes, principalement en{" "}
+                Développeur backend, principalement{" "}
                 <span className="text-foreground">Node.js / TypeScript</span>.
-                J'accorde une attention particulière à l'architecture, à la
-                qualité du code et à la sécurité.
+                Je travaille surtout sur des API, et c'est l'architecture qui
+                me passionne — faire en sorte qu'un projet reste maintenable
+                quand il dépasse les 5 000 lignes de code.
               </p>
               <p>
-                Je suis diplômé{" "}
+                J'ai obtenu mon titre{" "}
                 <span className="text-foreground">
                   Concepteur Développeur d'Applications
                 </span>{" "}
-                (La Plateforme, Marseille), titre obtenu en 2025 après deux
-                années d'alternance à la{" "}
+                à La Plateforme (Marseille) en 2025, après deux ans
+                d'alternance à la{" "}
                 <span className="text-foreground">
                   Banque Populaire Méditerranée
                 </span>
-                . Cette expérience en environnement bancaire m'a appris à coder
-                avec des contraintes réelles : revue de code, sécurité, qualité,
-                maintenabilité.
+                . Bosser en banque, ça forme à la rigueur sans avoir à en
+                parler : revue de code systématique, tests, sécurité — parce
+                que tu sais que ce que tu pushes va tourner chez des gens qui
+                ne pardonnent pas un bug.
               </p>
               <p>
-                Je développe aussi en auto-entrepreneur, ce qui renforce mon
-                autonomie et mon expérience terrain.
+                À côté, je développe en auto-entrepreneur. Porter un projet
+                seul, du brief client jusqu'à la mise en ligne, c'est l'autre
+                école — celle où il faut tout assumer, sans personne sur qui
+                se reposer.
               </p>
             </div>
           </FadeIn>
