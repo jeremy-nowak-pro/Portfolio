@@ -21,7 +21,7 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="relative pt-32 sm:pt-40 lg:pt-48 pb-16 sm:pb-24">
+    <section className="relative pt-24 sm:pt-28 lg:pt-40 pb-16 sm:pb-24">
       {/*
         Layout responsive :
         - Mobile / tablette : une seule colonne, le visuel est masqué.
