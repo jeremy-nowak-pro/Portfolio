@@ -3,7 +3,10 @@
 import { motion, type HTMLMotionProps } from "framer-motion";
 import { type ReactNode } from "react";
 
-interface FadeInProps extends Omit<HTMLMotionProps<"div">, "children"> {
+// On omet "whileInView" du type Framer car on redéfinit notre propre prop
+// booléenne (true = animer au scroll, false = animer au mount).
+interface FadeInProps
+  extends Omit<HTMLMotionProps<"div">, "children" | "whileInView"> {
   children: ReactNode;
   /** Délai en secondes. Default: 0 */
   delay?: number;
