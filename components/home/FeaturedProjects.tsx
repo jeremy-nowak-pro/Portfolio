@@ -13,7 +13,7 @@ export function FeaturedProjects() {
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
         <SectionTitle
           eyebrow="Sélection"
-          title="Projets en vedette"
+          title="Mes projets"
           description="Une sélection de projets représentatifs de ce que je fais le mieux."
         />
         <Link
