@@ -118,7 +118,7 @@ export default function AboutPage() {
     <div className="container pt-32 sm:pt-40 pb-16">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
         <FadeIn className="lg:col-span-1">
-          <GlassCard padding="none" className="overflow-hidden lg:sticky lg:top-24">
+          <GlassCard padding="none" className="overflow-hidden lg:sticky lg:top-40">
             <div className="relative aspect-square">
               <Image
                 src="/images/profile.jpeg"

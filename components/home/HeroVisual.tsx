@@ -3,13 +3,28 @@
 import { motion } from "framer-motion";
 
 /**
- * Visuel de droite du Hero — mock d'un éditeur de code en glassmorphism.
+ * Visuel de droite du Hero — fiche-stats glassmorphism.
+ *
+ * Trois sections logiques :
+ *  1. Header : libellé "Statut" + indicateur disponibilité (dot vert qui pulse).
+ *  2. Stats : 3 chiffres-clés (expérience, diplômes, domaine).
+ *  3. Footer : stack principale en chips.
+ *
  * Choix design :
- *  - Pas d'animation en boucle (sobriété demandée).
- *  - Une seule entrée discrète (fade + slide depuis la droite).
- *  - Halo violet diffus en arrière-plan pour ancrer la carte dans le thème.
- *  - Coloration syntaxique inline avec les tons accent du site (violet / emerald / sky / amber).
+ *  - Aucune animation en boucle continue (sobre), sauf le ping discret du dot
+ *    de disponibilité — il suggère "live" sans être distrayant.
+ *  - Halo violet diffus en arrière-plan pour intégrer la carte au thème.
+ *  - Lecture verticale : le visiteur peut absorber l'info en moins d'une seconde.
  */
+
+const stats = [
+  { value: "4+", label: "Années" },
+  { value: "2", label: "Diplômes" },
+  { value: "Backend", label: "Focus" },
+];
+
+const stack = ["TypeScript", "Node.js", "React", "Go"];
+
 export function HeroVisual() {
   return (
     <motion.div
@@ -17,82 +32,62 @@ export function HeroVisual() {
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className="relative w-full"
-      aria-hidden
     >
-      {/* Halo violet diffus derrière la carte */}
+      {/* Halo violet diffus en arrière-plan */}
       <div
         className="absolute -inset-12 bg-accent/15 blur-3xl rounded-full -z-10"
         aria-hidden
       />
 
-      {/* Carte glassmorphism */}
       <div className="glass rounded-2xl overflow-hidden">
-        {/* En-tête type IDE : 3 ronds + nom de fichier */}
-        <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06]">
-          <div className="flex gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-rose-400/50" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-400/50" />
-            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/50" />
-          </div>
-          <span className="ml-2 font-mono text-[11px] text-muted">
-            api/users.controller.ts
+        {/* Header — libellé + status */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.06]">
+          <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+            Statut
+          </span>
+          <span
+            className="inline-flex items-center gap-2 text-xs"
+            aria-label="Disponible pour de nouveaux projets"
+          >
+            {/* Dot vert avec ping subtil */}
+            <span className="relative flex h-2 w-2" aria-hidden>
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+            </span>
+            <span className="text-emerald-300 font-medium">Disponible</span>
           </span>
         </div>
 
-        {/* Snippet stylisé — backend TypeScript classique */}
-        <pre className="px-5 py-5 font-mono text-[12.5px] leading-[1.85] text-foreground/90 overflow-hidden">
-          <code>
-            <div>
-              <span className="text-violet-300">import</span>
-              <span className="text-muted">{" { "}</span>
-              <span className="text-emerald-300">Request</span>
-              <span className="text-muted">{" } "}</span>
-              <span className="text-violet-300">from</span>{" "}
-              <span className="text-amber-200">{"'express'"}</span>
+        {/* Stats — 3 colonnes */}
+        <div className="grid grid-cols-3 px-6 py-7 gap-4">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground">
+                {stat.value}
+              </div>
+              <div className="mt-1.5 text-[10px] uppercase tracking-[0.15em] text-muted">
+                {stat.label}
+              </div>
             </div>
+          ))}
+        </div>
 
-            <div className="h-3" aria-hidden />
-
-            <div>
-              <span className="text-violet-300">export async function</span>{" "}
-              <span className="text-sky-300">getUser</span>
-              <span className="text-muted">(req: </span>
-              <span className="text-emerald-300">Request</span>
-              <span className="text-muted">) {"{"}</span>
-            </div>
-
-            <div>
-              <span className="text-muted">{"  "}</span>
-              <span className="text-violet-300">const</span> user{" "}
-              <span className="text-muted">=</span>{" "}
-              <span className="text-violet-300">await</span>{" "}
-              <span>findUser</span>
-              <span className="text-muted">(req.params.id)</span>
-            </div>
-
-            <div>
-              <span className="text-muted">{"  "}</span>
-              <span className="text-violet-300">if</span>
-              <span className="text-muted"> (!user) </span>
-              <span className="text-violet-300">throw new</span>{" "}
-              <span className="text-sky-300">NotFoundError</span>
-              <span className="text-muted">(</span>
-              <span className="text-amber-200">{"'User'"}</span>
-              <span className="text-muted">)</span>
-            </div>
-
-            <div>
-              <span className="text-muted">{"  "}</span>
-              <span className="text-violet-300">return</span>
-              <span className="text-muted">{" { "}</span>data: user
-              <span className="text-muted">{" }"}</span>
-            </div>
-
-            <div>
-              <span className="text-muted">{"}"}</span>
-            </div>
-          </code>
-        </pre>
+        {/* Footer — stack principale */}
+        <div className="px-6 py-5 border-t border-white/[0.06]">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted mb-3">
+            Stack principale
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {stack.map((tech) => (
+              <span
+                key={tech}
+                className="px-2.5 py-1 text-xs font-mono rounded-full bg-white/[0.04] border border-white/[0.06]"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
     </motion.div>
   );
