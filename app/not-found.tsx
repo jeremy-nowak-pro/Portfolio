@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
-    <div className="container pt-40 pb-16 text-center">
+    <div className="container pt-32 sm:pt-40 pb-16 text-center">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-3">
         404
       </p>

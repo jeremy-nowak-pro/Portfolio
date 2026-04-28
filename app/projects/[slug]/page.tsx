@@ -46,7 +46,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
   const next = all[idx + 1] ?? all[0];
 
   return (
-    <article className="container pt-32 sm:pt-40 pb-16">
+    <article className="container pt-24 sm:pt-28 lg:pt-40 pb-16">
       <Link
         href="/projects"
         className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-8"
@@ -60,7 +60,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent mb-4">
             {project.role} · {project.year}
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gradient">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-gradient">
             {project.title}
           </h1>
           <p className="mt-5 text-lg sm:text-xl text-muted leading-relaxed">

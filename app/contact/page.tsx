@@ -20,7 +20,7 @@ const channels = [
 
 export default function ContactPage() {
   return (
-    <div className="container pt-32 sm:pt-40 pb-16">
+    <div className="container pt-24 sm:pt-28 lg:pt-40 pb-16">
       <SectionTitle
         eyebrow="Contact"
         title="Travaillons ensemble."

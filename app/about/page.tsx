@@ -115,11 +115,11 @@ function TimelineList({ entries }: { entries: Entry[] }) {
 
 export default function AboutPage() {
   return (
-    <div className="container pt-32 sm:pt-40 pb-16">
+    <div className="container pt-24 sm:pt-28 lg:pt-40 pb-16">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16">
         <FadeIn className="lg:col-span-1">
           <GlassCard padding="none" className="overflow-hidden lg:sticky lg:top-40">
-            <div className="relative aspect-square">
+            <div className="relative aspect-[4/3] sm:aspect-square">
               <Image
                 src="/images/profile.jpeg"
                 alt={`Photo de ${siteConfig.name}`}
@@ -146,7 +146,7 @@ export default function AboutPage() {
           </GlassCard>
         </FadeIn>
 
-        <div className="lg:col-span-2 space-y-16">
+        <div className="lg:col-span-2 space-y-12 sm:space-y-16">
           {/* Bio */}
           <FadeIn>
             <SectionTitle

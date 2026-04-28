@@ -16,6 +16,8 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-full font-medium " +
   "transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 " +
   "focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background " +
+  // Feedback tactile : léger shrink quand on tap (mobile) ou clique (desktop).
+  "active:scale-[0.97] " +
   "disabled:opacity-50 disabled:pointer-events-none";
 
 const variants: Record<Variant, string> = {
@@ -23,7 +25,7 @@ const variants: Record<Variant, string> = {
     "bg-accent text-white hover:bg-accent/90 shadow-lg shadow-accent/20 hover:shadow-accent/30",
   ghost: "text-foreground hover:bg-white/[0.05]",
   outline:
-    "border border-white/10 bg-white/[0.02] backdrop-blur-md hover:bg-white/[0.06] hover:border-white/20",
+    "border border-white/20 bg-white/[0.06] backdrop-blur-md hover:bg-white/[0.10] hover:border-white/30",
 };
 
 const sizes: Record<Size, string> = {
