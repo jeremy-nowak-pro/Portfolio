@@ -24,7 +24,7 @@ export default function ContactPage() {
       <SectionTitle
         eyebrow="Contact"
         title="Travaillons ensemble."
-        description="Mission, collaboration ou simple échange — je réponds en général sous 48h."
+        description="Mission, collaboration ou simple échange — je réponds sous 48h."
       />
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-5 gap-8">
