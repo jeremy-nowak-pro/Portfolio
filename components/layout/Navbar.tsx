@@ -18,14 +18,6 @@ const links: NavLink[] = [
 export function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   // Ferme le menu mobile sur changement de route
   useEffect(() => {
@@ -36,14 +28,7 @@ export function Navbar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-40 transition-all duration-300",
-        scrolled
-          ? "bg-background/60 backdrop-blur-xl border-b border-white/[0.06]"
-          : "bg-transparent",
-      )}
-    >
+    <header className="fixed top-0 inset-x-0 z-40 bg-background/60 backdrop-blur-xl border-b border-white/[0.06]">
       <nav
         aria-label="Navigation principale"
         className="container flex items-center justify-between h-16"

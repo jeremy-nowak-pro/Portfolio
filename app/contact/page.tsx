@@ -20,11 +20,11 @@ const channels = [
 
 export default function ContactPage() {
   return (
-    <div className="container pt-32 sm:pt-40 pb-16">
+    <div className="container pt-24 sm:pt-28 lg:pt-40 pb-16">
       <SectionTitle
         eyebrow="Contact"
         title="Travaillons ensemble."
-        description="Mission, collaboration ou simple échange — je réponds en général sous 48h."
+        description="Mission, collaboration ou simple échange — je réponds sous 48h."
       />
 
       <div className="mt-12 grid grid-cols-1 lg:grid-cols-5 gap-8">
