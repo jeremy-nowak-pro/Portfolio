@@ -171,10 +171,7 @@ export default function AboutPage() {
                 <span className="text-foreground">
                   Banque Populaire Méditerranée
                 </span>
-                . Bosser en banque, ça forme à la rigueur sans avoir à en
-                parler : revue de code systématique, tests, sécurité — parce
-                que tu sais que ce que tu pushes va tourner chez des gens qui
-                ne pardonnent pas un bug.
+                . J’y ai évolué dans un environnement exigeant, avec des revues de code systématiques et une forte attention portée à la qualité et à la sécurité des mises en production.
               </p>
               <p>
                 À côté, je développe en auto-entrepreneur. Porter un projet
