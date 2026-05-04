@@ -61,7 +61,7 @@ export function HeroVisual() {
         {/* Stats — 3 colonnes */}
         <div className="grid grid-cols-3 divide-x divide-white/[0.06] py-7">
           {stats.map((stat, i) => (
-            <div key={stat.label} className={`flex flex-col items-center justify-center ${i === 1 ? "pl-1 pr-5" : "px-3"}`}>
+            <div key={stat.label} className={`flex flex-col items-center justify-center ${i === 1 ? "pl-1 pr-10" : "px-3"}`}>
               <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground text-center">
                 {stat.value}
               </div>
