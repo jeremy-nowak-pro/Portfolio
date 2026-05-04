@@ -33,16 +33,11 @@ export function HeroVisual() {
       transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className="relative w-full"
     >
-      <motion.div
-        animate={{ y: [0, -10, 0], rotate: [0, 0.4, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="relative"
-      >
-        {/* Halo violet diffus en arrière-plan */}
-        <div
-          className="absolute -inset-12 bg-accent/15 blur-3xl rounded-full -z-10"
-          aria-hidden
-        />
+      {/* Halo violet diffus en arrière-plan */}
+      <div
+        className="absolute -inset-12 bg-accent/15 blur-3xl rounded-full -z-10"
+        aria-hidden
+      />
 
       <div className="glass rounded-2xl overflow-hidden">
         {/* Header — libellé + status */}
@@ -65,8 +60,8 @@ export function HeroVisual() {
 
         {/* Stats — 3 colonnes */}
         <div className="grid grid-cols-3 divide-x divide-white/[0.06] py-7">
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col items-center justify-center px-3">
+          {stats.map((stat, i) => (
+            <div key={stat.label} className={`flex flex-col items-center justify-center ${i === 1 ? "pl-1 pr-5" : "px-3"}`}>
               <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground text-center">
                 {stat.value}
               </div>
@@ -94,7 +89,6 @@ export function HeroVisual() {
           </div>
         </div>
       </div>
-      </motion.div>
     </motion.div>
   );
 }
