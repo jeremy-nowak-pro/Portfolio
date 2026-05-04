@@ -18,7 +18,7 @@ import { motion } from "framer-motion";
  */
 
 const stats = [
-  { value: "4+", label: "Années" },
+  { value: "4+", label: "Exp." },
   { value: "Bac +4", label: "Niveau" },
   { value: "Backend", label: "Focus" },
 ];
@@ -59,7 +59,7 @@ export function HeroVisual() {
         </div>
 
         {/* Stats — 3 colonnes */}
-        <div className="grid grid-cols-3 divide-x divide-white/[0.06] py-7 pl-2 pr-8">
+        <div className="grid grid-cols-3 divide-x divide-white/[0.06] py-7 px-6">
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col items-center justify-center px-3">
               <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground text-center">
