@@ -51,10 +51,10 @@ export function HeroVisual() {
           >
             {/* Dot vert avec ping subtil */}
             <span className="relative flex h-2 w-2" aria-hidden>
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-60 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
             </span>
-            <span className="text-emerald-300 font-medium">Disponible</span>
+            <span className="text-emerald-700 font-medium">Disponible</span>
           </span>
         </div>
 
