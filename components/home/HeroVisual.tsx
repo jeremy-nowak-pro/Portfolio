@@ -41,7 +41,7 @@ export function HeroVisual() {
 
       <div className="glass rounded-2xl overflow-hidden">
         {/* Header — libellé + status */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/[0.06]">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-black/[0.07]">
           <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
             Statut
           </span>
@@ -59,7 +59,7 @@ export function HeroVisual() {
         </div>
 
         {/* Stats — 3 colonnes */}
-        <div className="flex divide-x divide-white/[0.06] py-7">
+        <div className="flex divide-x divide-black/[0.07] py-7">
           {stats.map((stat) => (
             <div key={stat.label} className="flex-1 flex flex-col items-center justify-center px-3">
               <div className="text-2xl sm:text-3xl font-semibold tracking-tight text-foreground text-center">
@@ -73,7 +73,7 @@ export function HeroVisual() {
         </div>
 
         {/* Footer — stack principale */}
-        <div className="px-6 py-5 border-t border-white/[0.06]">
+        <div className="px-6 py-5 border-t border-black/[0.07]">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted mb-3">
             Stack principale
           </p>
@@ -81,7 +81,7 @@ export function HeroVisual() {
             {stack.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 text-xs font-mono rounded-full bg-white/[0.04] border border-white/[0.06]"
+                className="px-2.5 py-1 text-xs font-mono rounded-full bg-black/[0.04] border border-black/[0.07]"
               >
                 {tech}
               </span>
