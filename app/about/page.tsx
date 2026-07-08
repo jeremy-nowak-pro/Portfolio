@@ -196,7 +196,7 @@ export default function AboutPage() {
                       {group.items.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 text-xs font-mono rounded-full bg-black/[0.04] border border-black/[0.07]"
+                          className="px-2.5 py-1 text-xs font-mono rounded-full bg-white/[0.04] border border-white/[0.06]"
                         >
                           {tech}
                         </span>

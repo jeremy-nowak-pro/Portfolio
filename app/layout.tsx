@@ -63,8 +63,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FAFAF7",
-  colorScheme: "light",
+  themeColor: "#0E2219",
+  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
 };
@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${inter.variable} ${jetbrains.variable}`}
+      className={`${inter.variable} ${jetbrains.variable} dark`}
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col">

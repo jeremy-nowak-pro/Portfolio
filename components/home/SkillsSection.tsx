@@ -28,7 +28,7 @@ function LevelIndicator({ level }: { level: SkillLevel }) {
           key={i}
           className={cn(
             "block h-1 w-3 rounded-full transition-colors",
-            i < filled ? "bg-accent" : "bg-black/[0.10]",
+            i < filled ? "bg-accent" : "bg-white/10",
           )}
         />
       ))}

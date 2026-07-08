@@ -10,9 +10,9 @@ type Status = "idle" | "submitting" | "success" | "error";
 // text-base (16px) en mobile pour empêcher le zoom auto d'iOS Safari au focus.
 // sm:text-sm (14px) à partir de tablette pour rester aligné au reste de l'UI desktop.
 const fieldClass =
-  "w-full px-4 py-3 rounded-xl bg-black/[0.03] border border-black/[0.09] " +
+  "w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.08] " +
   "text-base sm:text-sm text-foreground placeholder:text-muted/60 " +
-  "focus:outline-none focus:border-accent/60 focus:bg-black/[0.05] " +
+  "focus:outline-none focus:border-accent/60 focus:bg-white/[0.05] " +
   "transition-colors";
 
 export function ContactForm() {

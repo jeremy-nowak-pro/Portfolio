@@ -147,7 +147,7 @@ export default function ProjectDetailPage({ params }: PageProps) {
                   {project.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 text-[11px] font-mono rounded-full bg-black/[0.04] border border-black/[0.07]"
+                      className="px-2 py-0.5 text-[11px] font-mono rounded-full bg-white/[0.04] border border-white/[0.06]"
                     >
                       {tech}
                     </span>

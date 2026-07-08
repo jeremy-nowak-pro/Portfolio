@@ -28,7 +28,7 @@ export function Navbar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-40 bg-background/80 backdrop-blur-xl border-b border-black/[0.07]">
+    <header className="fixed top-0 inset-x-0 z-40 bg-background/70 backdrop-blur-xl border-b border-white/[0.08]">
       <nav
         aria-label="Navigation principale"
         className="container flex items-center justify-between h-16"
@@ -57,7 +57,7 @@ export function Navbar() {
                 {isActive(link.href) && (
                   <motion.span
                     layoutId="nav-active"
-                    className="absolute inset-0 bg-black/[0.06] rounded-full -z-10"
+                    className="absolute inset-0 bg-white/[0.06] rounded-full -z-10"
                     transition={{ type: "spring", duration: 0.5 }}
                   />
                 )}
@@ -72,7 +72,7 @@ export function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
-          className="md:hidden p-2 rounded-lg hover:bg-black/[0.05] transition-colors"
+          className="md:hidden p-2 rounded-lg hover:bg-white/[0.05] transition-colors"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -86,7 +86,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden border-t border-black/[0.07] bg-background/90 backdrop-blur-xl"
+            className="md:hidden border-t border-white/[0.08] bg-background/90 backdrop-blur-xl"
           >
             <ul className="container py-4 flex flex-col gap-1">
               {links.map((link) => (
@@ -96,8 +96,8 @@ export function Navbar() {
                     className={cn(
                       "block px-4 py-3 rounded-lg text-sm",
                       isActive(link.href)
-                        ? "bg-black/[0.05] text-foreground"
-                        : "text-muted hover:bg-black/[0.03]",
+                        ? "bg-white/[0.05] text-foreground"
+                        : "text-muted hover:bg-white/[0.03]",
                     )}
                   >
                     {link.label}
