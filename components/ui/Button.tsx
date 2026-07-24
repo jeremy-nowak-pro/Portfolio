@@ -23,9 +23,9 @@ const base =
 const variants: Record<Variant, string> = {
   primary:
     "bg-accent text-white hover:bg-accent/90 shadow-lg shadow-accent/20 hover:shadow-accent/30",
-  ghost: "text-foreground hover:bg-white/[0.05]",
+  ghost: "text-foreground hover:bg-black/[0.05]",
   outline:
-    "border border-white/20 bg-white/[0.06] hover:bg-white/[0.10] hover:border-white/30",
+    "border border-black/15 bg-black/[0.04] hover:bg-black/[0.07] hover:border-black/25",
 };
 
 const sizes: Record<Size, string> = {

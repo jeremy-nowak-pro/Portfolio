@@ -50,7 +50,7 @@ export function ProjectCard({
           <span
             className={cn(
               "absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-mono",
-              "bg-background/70 backdrop-blur-sm border border-white/10",
+              "bg-background/70 backdrop-blur-sm border border-black/[0.10]",
               STATUS_COLORS[project.status],
             )}
           >
@@ -77,7 +77,7 @@ export function ProjectCard({
             {project.stack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-0.5 text-[11px] font-mono rounded-full bg-white/[0.04] border border-white/[0.06] text-muted"
+                className="px-2 py-0.5 text-[11px] font-mono rounded-full bg-black/[0.04] border border-black/[0.07] text-muted"
               >
                 {tech}
               </span>

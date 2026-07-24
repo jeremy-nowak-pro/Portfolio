@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --background: 14 34 25;
-    --foreground: 216 237 228;
-    --muted: 90 144 128;
+    --background: 250 250 247;
+    --foreground: 17 17 16;
+    --muted: 115 114 112;
     --accent: 234 90 12;
-    --border: 216 237 228;
+    --border: 17 17 16;
   }
 
   html {
@@ -29,14 +29,14 @@
 }
 
 @layer components {
-  /* Surface glassmorphism — la base réutilisée par GlassCard */
+  /* Surface légèrement différenciée du fond — la base réutilisée par GlassCard */
   .glass {
-    @apply bg-white/[0.04] backdrop-blur-xl border border-white/[0.08]
+    @apply bg-black/[0.03] border border-black/[0.07]
            shadow-glass;
   }
 
   .glass-hover {
-    @apply hover:bg-white/[0.06] hover:border-white/[0.14]
+    @apply hover:bg-black/[0.05] hover:border-black/[0.12]
            hover:shadow-glass-hover transition-all duration-300;
   }
 
@@ -47,8 +47,7 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br
-           from-foreground via-foreground to-foreground/60;
+    @apply text-foreground;
   }
 }
 

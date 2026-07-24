@@ -1,15 +1,12 @@
-import { HeroParallax } from "@/components/home/HeroParallax";
+import { Hero } from "@/components/home/Hero";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 
 // Page statique (SSG) — aucune donnée externe au build, performance maximale.
 export default function HomePage() {
   return (
-    <>
-      {/* HeroParallax est full-width — pas de container wrapper */}
-      <HeroParallax />
-      <div className="container">
-        <FeaturedProjects />
-      </div>
-    </>
+    <div className="container">
+      <Hero />
+      <FeaturedProjects />
+    </div>
   );
 }

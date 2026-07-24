@@ -171,7 +171,7 @@ export default function AboutPage() {
                 <span className="text-foreground">
                   Banque Populaire Méditerranée
                 </span>
-                . J’y ai évolué dans un environnement exigeant, avec des revues de code systématiques et une forte attention portée à la qualité et à la sécurité des mises en production.
+                . J'y ai évolué dans un environnement exigeant, avec des revues de code systématiques et une forte attention portée à la qualité et à la sécurité des mises en production.
               </p>
               <p>
                 À côté, je développe en auto-entrepreneur. Porter un projet
@@ -196,7 +196,7 @@ export default function AboutPage() {
                       {group.items.map((tech) => (
                         <span
                           key={tech}
-                          className="px-2.5 py-1 text-xs font-mono rounded-full bg-white/[0.04] border border-white/[0.06]"
+                          className="px-2.5 py-1 text-xs font-mono rounded-full bg-black/[0.04] border border-black/[0.07]"
                         >
                           {tech}
                         </span>

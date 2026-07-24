@@ -10,7 +10,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.08] mt-24">
+    <footer className="border-t border-black/[0.07] mt-24">
       <div className="container py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <p className="text-sm text-muted">
           © {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
@@ -25,7 +25,7 @@ export function Footer() {
                 target={href.startsWith("http") ? "_blank" : undefined}
                 rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="p-2 rounded-full text-muted hover:text-foreground
-                           hover:bg-white/[0.05] transition-colors"
+                           hover:bg-black/[0.05] transition-colors"
               >
                 <Icon size={18} />
               </Link>
