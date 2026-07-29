@@ -20,9 +20,9 @@ const STATUS_LABELS: Record<ProjectStatus, string> = {
 };
 
 const STATUS_COLORS: Record<ProjectStatus, string> = {
-  live: "text-emerald-300",
-  "in-progress": "text-amber-300",
-  archived: "text-muted",
+  live: "text-white bg-accent border-accent/40",
+  "in-progress": "text-accent bg-background border-accent/50",
+  archived: "text-white bg-foreground/80 border-white/20",
 };
 
 export function ProjectCard({
@@ -49,8 +49,8 @@ export function ProjectCard({
           <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
           <span
             className={cn(
-              "absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-mono",
-              "bg-background/70 backdrop-blur-sm border border-black/[0.10]",
+              "absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] uppercase tracking-wider font-mono font-semibold",
+              "border shadow-sm",
               STATUS_COLORS[project.status],
             )}
           >
